@@ -1,7 +1,7 @@
-# <span style="color:D7BA7D"> <b> Byrd-ICP Data Analysis Packge </b> </span>
+# <span style="color:D7BA7D"> <b> Byrd-ICP Data App </b> </span>
 
-### **Why the Byrd-ICP Data Analysis Pacakge?**
-This package is intended to hasten the process of acquiring ice core data from the Byrd Polar & Climate Research Center's Ice Core Paleoclimatology Group (Byrd-ICP). All data in this package are available on the NOAA NCEI Paleo Data Search webpage: **https://www.ncei.noaa.gov/access/paleo-search/**
+### **Why the Byrd-ICP Data App?**
+This package is intended to accelerate the process of acquiring ice core data from the Byrd Polar & Climate Research Center's Ice Core Paleoclimatology Group (Byrd-ICP). All data in this package are available on the NOAA NCEI Paleo Data Search webpage: **https://www.ncei.noaa.gov/access/paleo-search/**
 
 You will need to select the <strong>Ice Cores</strong> data type and choose "Mosley-Thompson, E." and "Thompson, L.G." from under the <strong>Investigators</strong> section of the page. Finally, click **SEARCH**.
 
@@ -16,7 +16,7 @@ _____
 -----
 # <span style="color:D7BA7D"> **App DOCUMENTATION** </span>
 
-The Byrd-ICP Data Analysis package includes an interactive MATLAB GUI that allows the user to utilize the package's functionality without having to write any code. Simply call the `ByrdApp` function from the MATLAB prompt and the application will open in a new window.
+The Byrd-ICP Data App is an interactive MATLAB GUI that allows the user to utilize the package's functionality without having to write any code. Simply call the `ByrdApp` function from the MATLAB command prompt and the application will open in a new window.
 
 ```matlab
 >> ByrdApp
