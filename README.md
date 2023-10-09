@@ -1,7 +1,7 @@
 # <span style="color:D7BA7D"> <b> Byrd-ICP Data Analysis Packge </b> </span>
 
 ### **Why the Byrd-ICP Data Analysis Pacakge?**
-This package is intended to hasten the process of acquiring ice core data from the Byrd Polar & Climate Research Center Ice Core Paleoclimatology Group (Byrd-ICP). All data in this package are available on the NOAA NCEI Paleo Data Search webpage: **https://www.ncei.noaa.gov/access/paleo-search/**
+This package is intended to hasten the process of acquiring ice core data from the Byrd Polar & Climate Research Center's Ice Core Paleoclimatology Group (Byrd-ICP). All data in this package are available on the NOAA NCEI Paleo Data Search webpage: **https://www.ncei.noaa.gov/access/paleo-search/**
 
 You will need to select the <strong>Ice Cores</strong> data type and choose "Mosley-Thompson, E." and "Thompson, L.G." from under the <strong>Investigators</strong> section of the page. Finally, click **SEARCH**.
 
@@ -33,7 +33,7 @@ The `ByrdApp` function requires that you have the following files stored on your
 
 <big>**Example Guide**</big>
 
-![Screenshot of application window](AppDisplay1.png "Byrd-ICP Data Analysis GUI")
+![Screenshot of application window](ByrdApp.png "Byrd-ICP Data Analysis GUI")
 
 1. Select an ice core from the **Choose a core** drop-down menu.
 
