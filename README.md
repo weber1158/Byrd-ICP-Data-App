@@ -10,7 +10,7 @@ Alternatively, a repository of Excel files containing the published data in an u
 _____
 
 ### **Timeline of Major Changes**
-* 10 October 2023 - Updated `ByrdApp.mlapp` to Version 2.1 in order to reflect changes in the data repository.
+* 10 October 2023 - Updated `ByrdApp.mlapp` to Version 2.2 in order to reflect changes in the data repository and to provide a fix for plotting ice core locations on a geographic axes.
 * 09 October 2023 - Updated package to Version 2.0 and removed depreciated functions.
 
 -----
