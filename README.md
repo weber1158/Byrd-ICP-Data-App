@@ -5,11 +5,12 @@ This package is intended to accelerate the process of acquiring ice core data fr
 
 You will need to select the <strong>Ice Cores</strong> data type and choose "Mosley-Thompson, E." and "Thompson, L.G." from under the <strong>Investigators</strong> section of the page. Finally, click **SEARCH**.
 
-Alternatively, a repository of Excel files containing the published data in an unofficial standardized format can be found at **https://zenodo.org/record/8353857** (Weber, 2023).
+Alternatively, a repository of Excel files containing the published data in an unofficial standardized format can be found at **https://zenodo.org/record/8427843** (Weber, 2023).
 
 _____
 
 ### **Timeline of Major Changes**
+* 10 October 2023 - Updated `ByrdApp.mlapp` to Version 2.1 in order to reflect changes in the data repository.
 * 09 October 2023 - Updated package to Version 2.0 and removed depreciated functions.
 
 -----
@@ -68,7 +69,7 @@ The `ByrdApp` function requires that you have the following files stored on your
 # <span style="color:D7BA7D"> **Function DOCUMENTATION** </span>
 
 ## **`readICP`**
-Imports an ice core dataset from the Byrd ICP group as a table. Simply download the desired Excel file from **https://zenodo.org/record/8353857** (Weber, 2023) and then specify your desired input(s) and output(s). 
+Imports an ice core dataset from the Byrd-ICP group as a table. Simply download the desired Excel file from **https://zenodo.org/record/8427843** (Weber, 2023) and then specify your desired input(s) and output(s). 
 
 <u> SYNTAX </u>
 
@@ -141,7 +142,7 @@ The input `core_name`  must be given in single quotes. It can be any of the foll
 Note that spelling must be all lowercase and that mutli-word core names require a hyphen between words.
 
 ## **`ICPmapshow`**
-Displays the locations of all ice core sites (collected by the Byrd ICP group) according to Davidge et al. (2022).
+Displays the locations of all ice core sites (collected by the Byrd-ICP group) according to Davidge et al. (2022).
 
 <u> SYNTAX </u>
 
@@ -173,4 +174,4 @@ gx.Basemap = 'satellite';
 
     Lindsey Davidge, Hanna L. Brooks, & Merlin L. Mah. (2022). Global ice drilling and archive location data for select ice cores (1.0.1) [Dataset]. Zenodo. https://doi.org/10.5281/zenodo.7076469
     
-    Weber, Austin M. (2023). Byrd Polar and Climate Research Center Ice Core Paleoclimatology Datasets in a Standardized Excel Format (1.0.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.8353857
+    Weber, Austin M. (2023). Byrd Polar and Climate Research Center Ice Core Paleoclimatology Datasets in a Standardized Excel Format (1.1.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.8427843
