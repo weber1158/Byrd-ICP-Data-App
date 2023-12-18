@@ -36,6 +36,7 @@ function dataset_names = ICP_get_dataset_names(core_name)
 % 	-> 'bruce-plateau'
 % 	-> 'dasuopu'
 % 	-> 'dunde'
+%	-> 'elbrus'
 % 	-> 'guliya'
 % 	-> 'interdecadal-pacific-oscillation-index'
 % 	-> 'kilimanjaro'
@@ -62,7 +63,7 @@ function dataset_names = ICP_get_dataset_names(core_name)
 % FUNCTION BODY
 %
 % Import table of ice core names and their corresponding dataset IDs
-name_table = readtable('https://zenodo.org/record/8353857/files/2023-ByrdICP-datasets.xlsx','VariableNamingRule','preserve');
+name_table = readtable('https://zenodo.org/record/10403150/files/2023-ByrdICP-datasets.xlsx','VariableNamingRule','preserve');
 
 % Search for core name that matches the input argument
 for n = 1:size(name_table,2) % No. columns in 'names'
