@@ -10,6 +10,7 @@ Alternatively, a repository of Excel files containing the published data in an u
 _____
 
 ### **Timeline of Major Changes**
+* 18 December 2023 - Updated `ByrdApp.mlapp` to Version 2.3. Users can now import data for the Elbrus ice core as well as the 41,000 year data for the Guliya plateau ice core. Additional plotting capabilities added.
 * 10 October 2023 - Updated `ByrdApp.mlapp` to Version 2.2 in order to reflect changes in the data repository and to provide a fix for plotting ice core locations on a geographic axes.
 * 09 October 2023 - Updated package to Version 2.0 and removed depreciated functions.
 
@@ -36,6 +37,8 @@ The `ByrdApp` function requires that you have the following files stored on your
 
 ![Screenshot of application window](ByrdApp.png "Byrd-ICP Data Analysis GUI")
 
+The figure above shows V2.2.0 of the app.
+
 1. Select an ice core from the **Choose a core** drop-down menu.
 
 2. The **Choose dataset** drop-down menu will autopopulate when you complete Step 1.
@@ -56,7 +59,7 @@ The `ByrdApp` function requires that you have the following files stored on your
 
 10. Choose the parameters you wish to plot by selecting from the `X-Data`, `Y-Data`, and `Chart Style` drop-down menus.
 
-11. (Optional) Select one of the four predefined color buttons.
+11. (Optional) Select one of the predefined color buttons, a line style, and/or adjust the moving average slider.
 
 12. Click the <span style="color:#a86da8"> **Plot** </span> button to visualize your parameters in the display area.
 
@@ -69,7 +72,7 @@ The `ByrdApp` function requires that you have the following files stored on your
 # <span style="color:D7BA7D"> **Function DOCUMENTATION** </span>
 
 ## **`readICP`**
-Imports an ice core dataset from the Byrd-ICP group as a table. Simply download the desired Excel file from **https://zenodo.org/record/8427843** (Weber, 2023) and then specify your desired input(s) and output(s). 
+Imports an ice core dataset from the Byrd-ICP group as a table. Simply download the desired Excel file from **https://zenodo.org/record/10403150** (Weber, 2023) and then specify your desired input(s) and output(s). 
 
 <u> SYNTAX </u>
 
@@ -124,6 +127,7 @@ The input `core_name`  must be given in single quotes. It can be any of the foll
 	-> 'bruce-plateau'
 	-> 'dasuopu'
 	-> 'dunde'
+	-> 'elbrus'
 	-> 'guliya'
 	-> 'interdecadal-pacific-oscillation-index'
 	-> 'kilimanjaro'
