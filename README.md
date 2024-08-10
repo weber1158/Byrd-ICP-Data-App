@@ -49,7 +49,7 @@ The latest rendition of the app (Version 3.0) should look like this:
 
 <img alt="Byrd Data Import Tool Appearance" width="800" src="/Screenshots/app-tutorial-image.png">
 
-Use the numbers in the image to as a reference for working with <small>`ByrdDIT`</small> as it is intended.
+Use the numbers in the image as a reference for working with <small>`ByrdDIT`</small> as it is intended (see [Tutorial](#tutorial)).
 
 ### Tutorial
 
