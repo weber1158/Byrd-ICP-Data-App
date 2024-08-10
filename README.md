@@ -17,7 +17,7 @@ For over forty years the Byrd Polar and Climate Research Center (henceforth “t
 
 The majority of these datasets have been made freely available through the NOAA World Data Service for Paleoclimatology (https://www.ncei.noaa.gov/access/paleo-search/). However, over the course of many decades the style of data formatting and the diversity of Byrd Center authors has varied considerably, making it a very inefficient process to find, access, download, visualize, and compare the data sets for one or multiple ice core records. 
 
-To improve the accessibility of these crucial data sets for researchers worldwide, a standardized data format has been adopted and applied to 81 data sets across 17 unique ice core records from 29 peer-reviewed publications ([Weber 2024](#references)). All of the data may now be quickly accessed with the the <u>Byrd</u> <u>D</u>ata <u>I</u>mport <u>T</u>ool <small>(`ByrdDIT`)</small>, an elegant and intuitive GUI written for MATLAB.
+To improve the accessibility of these crucial data sets for researchers worldwide, a standardized data format has been adopted and applied to 81 data sets across 17 unique ice core records from 29 peer-reviewed publications ([Weber 2023](#references)). All of the data may now be quickly accessed with the the <u>Byrd</u> <u>D</u>ata <u>I</u>mport <u>T</u>ool <small>(`ByrdDIT`)</small>, an elegant and intuitive GUI written for MATLAB.
 
 
 ## Timeline of Major Changes
