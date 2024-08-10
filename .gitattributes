@@ -1,0 +1,2 @@
+# Treat .mlapp files as MATLAB code for the language statistics
+*.mlapp linguist-language=MATLAB

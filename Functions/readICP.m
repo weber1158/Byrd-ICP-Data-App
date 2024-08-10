@@ -1,37 +1,36 @@
 function [data,latitude,longitude,elevation,yrDrilled,citation] = readICP(filename,sheetname)
-% readICP imports published datasets from the Byrd Polar & Climate
-% Research Center's Ice Core Paleoclimatology (Byrd-ICP) group. Down-
-% load the relevant Excel files from https://zenodo.org/record/8353857.
+%Imports published datasets from the Byrd Polar & Climate Research Center's
+%Ice Core Paleoclimatology (Byrd-ICP) group.
 %
 % SYNTAX
-%  data = readICP(filename)
-%  data = readICP(filename,sheetname)
-%  [~,latitude] = readICP(...)
-%  [~,~,longitude] = readICP(...)
-%  [~,~,~,elevation] = readICP(...)
-%  [~,~,~,~,yrDrilled] = readICP(...)
-%  [~,~,~,~,~,citation] = readICP(...)
+%  data = READICP(filename)
+%  data = READICP(filename,sheetname)
+%  [~,latitude] = READICP(...)
+%  [~,~,longitude] = READICP(...)
+%  [~,~,~,elevation] = READICP(...)
+%  [~,~,~,~,yrDrilled] = READICP(...)
+%  [~,~,~,~,~,citation] = READICP(...)
 %
 % DESCRIPTION
-%  readICP(filename) extracts the data from an Excel file
+%  READICP(filename) extracts the data from an Excel file
 %    corresponding to a specific ice core.
 %
-%  readICP(filename,sheetnam) extracts the data from a specified sheet
+%  READICP(filename,sheetnam) extracts the data from a specified sheet
 %    within an Excel file corresponding to a specific ice core.
 %
-%  [~,latitude] = readICP(...) extracts the latitude of the ice core from
+%  [~,latitude] = READICP(...) extracts the latitude of the ice core from
 %    the file metadata (in °N).
 %
-%  [~,~,longitude] = readICP(...) extracts the longitude of the ice core
+%  [~,~,longitude] = READICP(...) extracts the longitude of the ice core
 %    from the file metadata (in °E).
 %
-%  [~,~,~,elevation] = readICP(...) extracts the elevation of the ice core
+%  [~,~,~,elevation] = READICP(...) extracts the elevation of the ice core
 %    from the file metadata (in units of meters above sea level, masl).
 %
-%  [~,~,~,~,yrDrilled] = readICP(...) extracts the year that the ice core
+%  [~,~,~,~,yrDrilled] = READICP(...) extracts the year that the ice core
 %    was drilled from the file metadata.
 %
-%  [~,~,~,~,~,citation] = readICP(...) extracts the original reference
+%  [~,~,~,~,~,citation] = READICP(...) extracts the original reference
 %    citation for the ice core dataset from the file metadata.
 %
 % DETAILS:
@@ -43,21 +42,23 @@ function [data,latitude,longitude,elevation,yrDrilled,citation] = readICP(filena
 %
 % EXAMPLES:
 % Import data from an Excel file with only one sheet (e.g., Windy Dome)
-%   wd = readICP('C:\Directory\windy-dome.xlsx');
+%   wd = READICP('<path>\windy-dome.xlsx');
 % 
 % Import latitude, longitude, and elevation only
-%   [~,lat,lon,el] = readICP('C:\Directory\windy-dome.xlsx');
+%   [~,lat,lon,el] = READICP('<path>\windy-dome.xlsx');
 % 
 % Import data from an Excel file with more than one sheet, and import the
 % citation information for that dataset. E.g., the Puruogangri trace
 % element data is stored in a sheet called 'puruogangri-TE'
-%   [puruoTE,~,~,~,~,cite] = readICP('C:\Directory\puruogangri.xlsx',...
+%   [puruoTE,~,~,~,~,cite] = READICP('<path>\puruogangri.xlsx',...
 %        'puruogangri-TE');
 %
-% COPYRIGHT
-%  ©Austin M. Weber 2023
 % See also
-% ICP_get_dataset_names
+% ICP_get_dataset_names ICP_get_publication_names
+
+% COPYRIGHT
+%  ©Austin M. Weber 2024
+
 
 %
 % FUNCTION BODY:

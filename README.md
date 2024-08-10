@@ -1,181 +1,99 @@
-# <span style="color:D7BA7D"> <b> Byrd-ICP Data App </b> </span>
+# ByrdDIT - The Byrd Data Import Tool
 
-### **Why the Byrd-ICP Data App?**
-This package is intended to accelerate the process of acquiring ice core data from the Byrd Polar & Climate Research Center's Ice Core Paleoclimatology Group (Byrd-ICP). All data in this package are available on the NOAA NCEI Paleo Data Search webpage: **https://www.ncei.noaa.gov/access/paleo-search/**
+An intuitve graphical user interface (GUI) for ice core researchers to quickly access, visualize, and save data sets published by the Byrd Polar and Climate Research Center.
 
-You will need to select the <strong>Ice Cores</strong> data type and choose "Mosley-Thompson, E." and "Thompson, L.G." from under the <strong>Investigators</strong> section of the page. Finally, click **SEARCH**.
+## Table of Contents ##
 
-Alternatively, a repository of Excel files containing the published data in an unofficial standardized format can be found at **https://zenodo.org/record/8427843** (Weber, 2023).
+- [Why the Byrd Data Import Tool?](#why-byrddit)
+- [Timeline of major changes](#timeline-of-major-changes)
+- [Using the tool](#use)
+   - [Tutorial](#tutorial)
+   - [Examples](#examples)
+- [How to cite](#how-to-cite)
+- [References](#references)
 
-_____
+## Why `ByrdDIT`?
+For over forty years the Byrd Polar and Climate Research Center (henceforth “the Byrd Center”) has pioneered the drilling of unique high-mountain ice core records from Earth’s low latitude regions ([Thompson et al., 2021](#references)). During this time, the Byrd Center has published a wide range of ice core data sets with a global coverage of more than 16 countries across 6 continents. 
 
-### **Timeline of Major Changes**
-* 18 December 2023 - Updated `ByrdApp.mlapp` to Version 2.3. Users can now import data for the Elbrus ice core as well as the 41,000 year data for the Guliya plateau ice core. Additional plotting capabilities added.
-* 10 October 2023 - Updated `ByrdApp.mlapp` to Version 2.2 in order to reflect changes in the data repository and to provide a fix for plotting ice core locations on a geographic axes.
-* 09 October 2023 - Updated package to Version 2.0 and removed depreciated functions.
+The majority of these datasets have been made freely available through the NOAA World Data Service for Paleoclimatology (https://www.ncei.noaa.gov/access/paleo-search/). However, over the course of many decades the style of data formatting and the diversity of Byrd Center authors has varied considerably, making it a very inefficient process to find, access, download, visualize, and compare the data sets for one or multiple ice core records. 
 
------
------
-# <span style="color:D7BA7D"> **App DOCUMENTATION** </span>
+To improve the accessibility of these crucial data sets for researchers worldwide, a standardized data format has been adopted and applied to 81 data sets across 17 unique ice core records from 29 peer-reviewed publications ([Weber 2024](#references)). All of the data may now be quickly accessed with the the <u>Byrd</u> <u>D</u>ata <u>I</u>mport <u>T</u>ool <small>(`ByrdDIT`)</small>, an elegant and intuitive GUI written for MATLAB.
 
-The Byrd-ICP Data App is an interactive MATLAB GUI that allows the user to utilize the package's functionality without having to write any code. Simply call the `ByrdApp` function from the MATLAB command prompt and the application will open in a new window.
 
+## Timeline of Major Changes
+* **11 August 2024** - Updated <small>`ByrdApp.mlapp`</small> to Version 3.0. Includes a local data repository for significantly faster data import times and a new, scientifically-improved GUI interface with additional features (such as a button for copying citations in the <small>`BibTeX`</small> style).
+* **18 December 2023** - Updated <small>`ByrdApp.mlapp`</small> to Version 2.3. Users can now import data for the Elbrus ice core as well as the 41,000 year data for the Guliya plateau ice core. Additional plotting capabilities added.
+* **10 October 2023** - Updated <small>`ByrdApp.mlapp`</small> to Version 2.2 in order to reflect changes in the data repository and to provide a fix for plotting ice core locations on a geographic axes.
+* **09 October 2023** - Updated package to Version 2.0 and removed depreciated functions.
+
+## Use
+
+<small>`ByrdDIT`</small> is designed so that anyone, regardless of programming knowledge, is able to use it. First, sign up for a free [MathWorks account](https://www.mathworks.com/mwaccount/account/create?cid=getmatlab&wid=&uri=https%3A%2F%2Fmatlab.mathworks.com%2F) and download/open the <small>`ByrdDIT`</small> repository in MATLAB Online. Then, simply type either of the following commands into the Command Window to activate the GUI:
+
+Option 1:
 ```matlab
->> ByrdApp
+ByrdDIT
 ```
 
-The `ByrdApp` function requires that you have the following files stored on your current MATLAB search path:
-
-* <small>`ByrdApp.mlapp`</small>
-* <small>`readICP.m`</small>
-* <small>`ICP_get_dataset_names.m`</small>
-* <small>`ICPmapshow.m`</small>
-
------
-
-<big>**Example Guide**</big>
-
-![Screenshot of application window](ByrdApp.png "Byrd-ICP Data Analysis GUI")
-
-The figure above shows V2.2.0 of the app.
-
-1. Select an ice core from the **Choose a core** drop-down menu.
-
-2. The **Choose dataset** drop-down menu will autopopulate when you complete Step 1.
-
-3. Click the <span style="color:#a86da8"> **Import** </span> button. This will pull the data from a Zenodo repository (Weber, 2023). 
-
-4. The original reference citation for the dataset will be printed **Original reference** text area.
-
-5. The dataset is automatically displayed in a sortable table.
-
-6. The latitude, longitude, and elevation for the ice core will be printed in the **Location** text area.
-
-7. Click the <span style="color:#a8a86d"> **Save as...** </span> button beneath the table. This will open a dialogue box where you can choose to save the raw data as a `.csv`, `.xlsx`, or `.txt` file.
-
-8. Clicking the <span style="color:#a86da8"> **Map View** </span> button will open a new window illustrating the location of the ice core site.
-
-9. Display area for plotting data.
-
-10. Choose the parameters you wish to plot by selecting from the `X-Data`, `Y-Data`, and `Chart Style` drop-down menus.
-
-11. (Optional) Select one of the predefined color buttons, a line style, and/or adjust the moving average slider.
-
-12. Click the <span style="color:#a86da8"> **Plot** </span> button to visualize your parameters in the display area.
-
-13. Press the <span style="color:#a86d6d"> **Clear** </span> button to clear the display area.
-
-14. Click the <span style="color:#a8a86d"> **Save as...** </span> button in the bottom right corner. This will open a dialogue box where you can choose to save your plot as a `.jpeg`, `.png`, or `.tif` file.
-
------
------
-# <span style="color:D7BA7D"> **Function DOCUMENTATION** </span>
-
-## **`readICP`**
-Imports an ice core dataset from the Byrd-ICP group as a table. Simply download the desired Excel file from **https://zenodo.org/record/10403150** (Weber, 2023) and then specify your desired input(s) and output(s). 
-
-<u> SYNTAX </u>
-
-`data = readICP(filename)` Extracts the data from the first sheet in the specified Excel file. Output stored as a table.
-
-`data = readICP(filename,sheetname)` Extracts the data from the specified sheet within the specified Excel file. Output stored as a table.
-
-`[~,latitude] = readICP(...)` Extracts the latitude coordinate for the ice core site (in degrees N).
-
-`[~,~,longitude] = readICP(...)` Extracts the longitude coordinate for the ice core site (in degrees E).
-
-`[~,~,~,elevation] = readICP(...)` Extracts the elevation of the ice core site (in meters above sea level, masl).
-
-`[~,~,~,~,yrDrilled] = readICP(...)` Extracts the year that the ice core was drilled.
-
-`[~,~,~,~,~,citation] = readICP(...)` Extracts the original reference citation for the ice core dataset.
-
-<u> EXAMPLES </u>
-
-Import data from an Excel file with only one sheet (e.g., Windy Dome):
-
+Option 2:
 ```matlab
-wd = readICP('C:\...\windy-dome.xlsx');
+ByrdApp
 ```
 
-Import the latitude, longitude, and elevation only:
+That's it!
 
-```matlab
-[~,lat,lon,el] = readICP('C:\...\windy-dome.xlsx');
+The latest rendition of the app (Version 3.0) should look like this:
+
+<img alt="Byrd Data Import Tool Appearance" width="600" src="/Screenshots/app-tutorial-image.png">
+
+Use the numbers in the image to as a reference for working with <small>`ByrdDIT`</small> as it is intended.
+
+### Tutorial
+
+1. Choose an `Ice Core`, a related `Publication`, and a `Data Set` from the dropdown menus.
+
+2. `Import` the chosen data set.
+
+3. Area displaying the citation of a imported data set.  Copy the citation to your clipboard using the buttons below—either as `Plain Text` or in `BibTeX` formatting.
+
+4. Interactive table containing the imported data. Save the data to the current folder with the `Save` or `Save as…` buttons. The `Save` button saves the data as a CSV and the `Save as…` button gives the user a choice to save the data as a CSV, Excel, or Text file.
+
+5. Area displaying the latitude, longitude, and elevation of the ice core site. Click the `Map View` button to view the location of the ice core site in a new figure window<sup>**requires the [Mapping Toolbox](https://www.mathworks.com/products/mapping.html)</sup>.
+
+6. User selections for plotting. Choose and x- and y- variable from the dropdown menus as well as a chart style. Optional adjustments can also be made to the line width, line style, and color properties of the chart. Additionally, the user may specify a moving average for the data.
+
+7. Click the `Plot` button to visualize the selections from step 6. The `Clear` button resets the Data Visualization Panel. The `Save as…` button gives the user the choice to save the chart as a PNG, JPEG, or TIF image.
+
+8. Data Visualization Panel. Automatically labels the axes with the correct metadata and gives the plot a descriptive title. TIP: Some chart types (e.g., line charts) are stackable.
+
+
+### Examples
+
+An example of <small>`ByrdDIT`</small> in action is given below. 
+
+<img alt="Example of the Byrd Data Import Tool" width="600" src="/Screenshots/app-example-image.png">
+
+The screenshot above shows how the user can select a data set for the Nevado Huascarán ice core and visualize the reconstructed water isotope (δ<sup>18</sup>O) data for the mountain Col. Clicking the red <small>`Map View`</small> button will open a new window showing the location of the ice core site:
+
+<img alt="Map View of an Ice Core Site" width="300" src="/Screenshots/map-view-example-image.png">
+
+
+## How to cite
+Weber, Austin M. (2024) ByrdDIT - The Byrd Data Import Tool. Version 3.0.0 [Software]. GitHub. https://github.com/weber1158/Byrd-ICP-Data-App
+
+For BibTeX:
+```tex
+@software{weber2024byrd
+   author = {Weber, Austin M.}, 
+   title = {{ByrdDIT} - {Byrd} {Data} {Import} {Tool}}, 
+   year = 2024, 
+   publisher = {GitHub}, 
+   version = {3.0.0}, 
+   url = {https://github.com/weber1158/Byrd-ICP-Data-App} 
+}
 ```
 
-Import data from an Excel file with more than one sheet, and import the
-citation information for that dataset. E.g., the Puruogangri trace
-element data is stored in a sheet called 'puruogangri-TE':
+## References
+* Thompson, Lonnie G., Davis, M. E., Mosley-Thompson, E., Porter, S. E., Corrales, G. V., Shuman, C. A., & Tucker, C. J. (2021). The impacts of warming on rapidly retreating high-altitude, low-latitude glaciers and ice core-derived climate records. Global and Planetary Change, 203, 103538. https://doi.org/10.1016/j.gloplacha.2021.103538
 
-```matlab
-[puruoTE,~,~,~,~,cite] = readICP('C:\...\puruogangri.xlsx','puruogangri-TE');
-```
-
-## **`ICP_get_dataset_names`**
-Generates a cell array of dataset names belonging to a specified ice core site.
-
-<u> SYNTAX </u>
-
-`names = ICP_get_dataset_names(core_name)`
-
-<u> DESCRIPTION </u>
-
-The input `core_name`  must be given in single quotes. It can be any of the following: <small>
-
-	-> 'bona-churchill'
-	-> 'bruce-plateau'
-	-> 'dasuopu'
-	-> 'dunde'
-	-> 'elbrus'
-	-> 'guliya'
-	-> 'interdecadal-pacific-oscillation-index'
-	-> 'kilimanjaro'
-	-> 'nevado-huascaran'
-	-> 'plateau-remote'
-	-> 'prince-of-wales'
-	-> 'puncak-jaya'
-	-> 'puruogangri'
-	-> 'quelccaya'
-	-> 'sajama'
-	-> 'siple-station'
-	-> 'taylor-dome'
-	-> 'windy-dome'
-</small>
-
-Note that spelling must be all lowercase and that mutli-word core names require a hyphen between words.
-
-## **`ICPmapshow`**
-Displays the locations of all ice core sites (collected by the Byrd-ICP group) according to Davidge et al. (2022).
-
-<u> SYNTAX </u>
-
-`s = ICPmapshow()`
-
-<u> DESCRIPTION </u>
-
-The function takes no input arguments and the output is an axes object. Unfortunately, this function **requires the MATLAB Mapping Toolbox™**. 
-
-<u> EXAMPLE: Changing the basemap </u>
-
-```matlab
-% Generate map
-map = ICPmapshow();
-
-% Change basemap to satellite
-gx = map.Parent;
-gx.Basemap = 'satellite';
-
-% Alternative basemaps:
-% 'topographic' (default), 'darkwater', 'grayland', 'bluegreen',
-% 'grayterrain', 'colorterrain', 'landcover', 'streets', 'streets-light',
-% 'streets-dark', 'satellite', 'none'
-```
-
------
-
-# <span style="color:D7BA7D"> **REFERENCES** </span>
-
-    Lindsey Davidge, Hanna L. Brooks, & Merlin L. Mah. (2022). Global ice drilling and archive location data for select ice cores (1.0.1) [Dataset]. Zenodo. https://doi.org/10.5281/zenodo.7076469
-    
-    Weber, Austin M. (2023). Byrd Polar and Climate Research Center Ice Core Paleoclimatology Datasets in a Standardized Excel Format (1.1.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.8427843
+* Weber, Austin M. (2023). Byrd Polar and Climate Research Center Ice Core Paleoclimatology Datasets in a Standardized Excel Format (1.2.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.10403150
