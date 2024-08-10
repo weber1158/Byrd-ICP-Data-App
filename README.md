@@ -44,7 +44,7 @@ That's it!
 
 The latest rendition of the app (Version 3.0) should look like this:
 
-<img alt="Byrd Data Import Tool Appearance" width="600" src="/Screenshots/app-tutorial-image.png">
+<img alt="Byrd Data Import Tool Appearance" width="800" src="/Screenshots/app-tutorial-image.png">
 
 Use the numbers in the image to as a reference for working with <small>`ByrdDIT`</small> as it is intended.
 
@@ -60,7 +60,7 @@ Use the numbers in the image to as a reference for working with <small>`ByrdDIT`
 
 5. Area displaying the latitude, longitude, and elevation of the ice core site. Click the `Map View` button to view the location of the ice core site in a new figure window<sup>**requires the [Mapping Toolbox](https://www.mathworks.com/products/mapping.html)</sup>.
 
-6. User selections for plotting. Choose and x- and y- variable from the dropdown menus as well as a chart style. Optional adjustments can also be made to the line width, line style, and color properties of the chart. Additionally, the user may specify a moving average for the data.
+6. User selections for plotting. Choose an x- and y- variable from the dropdown menus as well as a chart style. Optional adjustments can also be made to the line width, line style, and color properties of the chart. Additionally, the user may specify a moving average for the data.
 
 7. Click the `Plot` button to visualize the selections from step 6. The `Clear` button resets the Data Visualization Panel. The `Save as…` button gives the user the choice to save the chart as a PNG, JPEG, or TIF image.
 
@@ -71,11 +71,11 @@ Use the numbers in the image to as a reference for working with <small>`ByrdDIT`
 
 An example of <small>`ByrdDIT`</small> in action is given below. 
 
-<img alt="Example of the Byrd Data Import Tool" width="600" src="/Screenshots/app-example-image.png">
+<img alt="Example of the Byrd Data Import Tool" width="800" src="/Screenshots/app-example-image.png">
 
 The screenshot above shows how the user can select a data set for the Nevado Huascarán ice core and visualize the reconstructed water isotope (δ<sup>18</sup>O) data for the mountain Col. Clicking the red <small>`Map View`</small> button will open a new window showing the location of the ice core site:
 
-<img alt="Map View of an Ice Core Site" width="300" src="/Screenshots/map-view-example-image.png">
+<img alt="Map View of an Ice Core Site" width="500" src="/Screenshots/map-view-example-image.png">
 
 
 ## How to cite
