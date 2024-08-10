@@ -1,5 +1,8 @@
 # ByrdDIT - The Byrd Data Import Tool
 
+[![View my project on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/171139) [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/fileexchange/v1?id=171139)
+
+
 An intuitve graphical user interface (GUI) for ice core researchers to quickly access, visualize, and save data sets published by the Byrd Polar and Climate Research Center.
 
 ## Table of Contents ##
@@ -79,16 +82,16 @@ The screenshot above shows how the user can select a data set for the Nevado Hua
 
 
 ## How to cite
-Weber, Austin M. (2024) ByrdDIT - The Byrd Data Import Tool. Version 3.0.0 [Software]. GitHub. https://github.com/weber1158/Byrd-ICP-Data-App
+Weber, Austin M. (2024) ByrdDIT - The Byrd Data Import Tool. Version 3.0 [Software]. GitHub. https://github.com/weber1158/Byrd-ICP-Data-App
 
 For BibTeX:
 ```tex
 @software{weber2024byrd
    author = {Weber, Austin M.}, 
-   title = {{ByrdDIT} - {Byrd} {Data} {Import} {Tool}}, 
+   title = {{ByrdDIT} - {The} {Byrd} {Data} {Import} {Tool}}, 
    year = 2024, 
    publisher = {GitHub}, 
-   version = {3.0.0}, 
+   version = {3.0}, 
    url = {https://github.com/weber1158/Byrd-ICP-Data-App} 
 }
 ```
