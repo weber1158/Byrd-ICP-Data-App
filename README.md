@@ -24,7 +24,7 @@ To improve the accessibility of these crucial data sets for researchers worldwid
 
 
 ## Timeline of Major Changes
-* **11 August 2024** - Updated <small>`ByrdApp.mlapp`</small> to Version 3.0. Includes a local data repository for significantly faster data import times and a new, scientifically-improved GUI interface with additional features (such as a button for copying citations in the <small>`BibTeX`</small> style).
+* **10 August 2024** - Updated <small>`ByrdApp.mlapp`</small> to Version 3.0. Includes a local data repository for significantly faster data import times and a new, scientifically-improved GUI interface with additional features (such as a button for copying citations in the <small>`BibTeX`</small> style).
 * **18 December 2023** - Updated <small>`ByrdApp.mlapp`</small> to Version 2.3. Users can now import data for the Elbrus ice core as well as the 41,000 year data for the Guliya plateau ice core. Additional plotting capabilities added.
 * **10 October 2023** - Updated <small>`ByrdApp.mlapp`</small> to Version 2.2 in order to reflect changes in the data repository and to provide a fix for plotting ice core locations on a geographic axes.
 * **09 October 2023** - Updated package to Version 2.0 and removed depreciated functions.
